@@ -1,0 +1,19 @@
+name: 'Action-Yml-Edit'
+description: 'An action with an alpine based image with yq pre-installed.'
+inputs:
+  key:
+    description: 'The key (path) of the value to be changed (example: "image.frontend")'
+    required: true
+  value:
+    description: 'The new value that is to be inserted in the yaml (example: "nginx:latest")'
+    required: true
+  yml-file:
+    description: 'The filename to the yaml that is to be edited (example: "path/to/file.yml")'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.key }}
+    - ${{ inputs.value }}
+    - ${{ inputs.yml-file }}
