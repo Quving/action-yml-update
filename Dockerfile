@@ -1,9 +1,9 @@
-FROM alpine:3.10.4
+FROM alpine:3.18.4
 
-RUN apk update && apk add bash vim yq
+RUN apk add bash vim yq
 
 WORKDIR /workdir
 COPY . .
 RUN chmod +x entrypoint.sh
 
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["/workdir/entrypoint.sh"]
