@@ -1,4 +1,4 @@
-# Action Yml Edit
+# Action Yml Update
 
 ## Description
 
@@ -15,3 +15,4 @@ steps:
       value: 'value'
       yml-file: 'file.yml'
 ```
+

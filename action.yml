@@ -1,4 +1,4 @@
-name: 'Action-Yml-Edit'
+name: 'Action-Yml-Update'
 description: 'An action with an alpine based image with yq pre-installed.'
 inputs:
   key:
